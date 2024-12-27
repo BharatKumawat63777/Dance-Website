@@ -1,0 +1,41 @@
+//- index.pug
+doctype html
+html
+  head
+    
+    style
+      include ../static/style.css
+  body
+    nav#navbar 
+           ul 
+             li #[a(href="/home") Home] 
+             li #[a(href="/") About] 
+             li #[a(href="/") Services]
+             li #[a(href="/") class info] 
+             li #[a(href="/contact") contact us]
+
+    div.container      
+        h1 contact 
+         form(action="xyz",method="post", class="myForm")
+         input(type="text", class="myInput",name="name", placeholder="Enter your name")
+         input(type="phone", class="myInput",name="phone", placeholder="Enter your phone number")
+         input(type="email", class="myInput",name="email", placeholder="Enter your email id")
+         input(type="text", class="myInput",name="address", placeholder="Enter your address")
+         input(type="text", class="myInput",name="desc", placeholder="Enter your concern")
+        |    submit    
+
+
+
+
+    section#introSection 
+        | section for picture 
+    section#sponsorSection 
+       | Sction for sponsors 
+       img(src="../image/abc.webp", alt="abc")
+   
+    section#footer 
+       | our footer here  
+       img(src="../image/Ganapati.jpeg", alt="Ganapati")
+
+    script
+      include ../static/index.js
